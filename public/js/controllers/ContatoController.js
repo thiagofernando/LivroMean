@@ -2,9 +2,9 @@
  * Created by ThiagoFernando on 07/03/2015.
  */
 angular.module('contatooh').controller('ContatoController',
-    function($scope, $routeParams, $resource) {
+    function($scope, $routeParams, Contato) {
         console.log($routeParams.contatoId);
-        var Contato = $resource('/contatos/:id');
+     //   var Contato = $resource('/contatos/:id');
 
         if($routeParams.contatoId) {
             Contato.get({id: $routeParams.contatoId},
@@ -19,6 +19,16 @@ angular.module('contatooh').controller('ContatoController',
                 }
             );
         } else {
-            $scope.contato = {};
+            $scope.contato = new Contato();
         }
+        $scope.salva = function() {
+            $scope.contato.$save()
+                .then(function(){
+                    $scope.mensagem = {texto: 'Salvo com sucesso'};
+                    $scope.contato = new Contato();
+                })
+                .catch(function(erro) {
+                    $scope.mensagem = {texto: 'Não foi possível salvar'};
+            });
+        };
     });
