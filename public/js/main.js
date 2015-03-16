@@ -2,7 +2,9 @@
  * Created by ThiagoFernando on 06/03/2015.
  */
 angular.module('contatooh', ['ngRoute', 'ngResource'])
-    .config(function($routeProvider) {
+    .config(function($routeProvider, $httpProvider) {
+
+        $httpProvider.interceptors.push('meuInterceptor');
 
         $routeProvider.when('/contatos', {
             templateUrl: 'partials/contatos.html',
@@ -15,6 +17,9 @@ angular.module('contatooh', ['ngRoute', 'ngResource'])
         $routeProvider.when('/contato', {
             templateUrl: 'partials/contato.html',
             controller: 'ContatoController'
+        });
+        $routeProvider.when('/auth', {
+            templateUrl: 'partials/auth.html'
         });
         $routeProvider.otherwise({redirectTo: '/contatos'});
     });

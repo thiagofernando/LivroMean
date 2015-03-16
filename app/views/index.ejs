@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 </head>
-<body class="container" >
+<body >
+<%if (usuarioLogado.lenght > 0) {%>
+    <div class ="text-right">
+     <p>
+         Logado como: <span id="usuario-logado">
+                          <%=usuarioLogado%>
+                      </span>
+     </p>
+    </div>
+<% } %>
 <div ng-view></div>
 <script src="vendor/angular/angular.js"></script>
 <script src="vendor/angular-route/angular-route.js"></script>
 <script src="vendor/angular-resource/angular-resource.js"></script>
 <script src="js/main.js"></script>
-<script src="js/controllers/ContatosController.js"></script>
-<script src="js/controllers/ContatoController.js"></script>
+<script src=".js/controllers/ContatosController.js"></script>
+<script src=".js/controllers/ContatoController.js"></script>
 <script src="js/services/ContatoService.js"></script>
+<script src="js/services/InterceptorService.js"></script>
 </body>
 </html>
