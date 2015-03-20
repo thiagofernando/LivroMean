@@ -38,7 +38,7 @@ module.exports = function() {
     app.use(helmet.xframe());
     app.use(helmet.xssFilter());
     app.use(helmet.nosniff());
-  //  app.disable('x-powered-by');
+    //app.disable('x-powered-by');
     app.use(helmet.hidePoweredBy({setTo: 'PHP 5.5.14'}));
 
     load('models', {cwd: 'app'})
