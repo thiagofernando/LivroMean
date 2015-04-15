@@ -1,0 +1,18 @@
+language: node.js
+node_js:
+- 0.12
+notifications:
+- thiagofernando@outlook.com
+before_install:
+- npm install -g bower
+- npm install -g grunt
+- npm install -g karma
+- npm install -g protractor
+-webdriver-manager update
+-bower install
+before_scripts:
+- grunt
+- cd dist
+- npm install karma-phantomjs-launcher --save-dev
+script:
+- karma start config/karma.config.js --single-run --browsers PhantomJs
