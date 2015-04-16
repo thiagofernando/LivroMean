@@ -5,8 +5,8 @@ notifications:
 - thiagofernando@outlook.com
 before_install:
 - npm install -g bower
-- npm install -g grunt
-- npm install -g karma
+- npm install -g grunt-cli
+- npm install -g karma-cli
 - npm install -g protractor
 - webdriver-manager update
 - bower install
