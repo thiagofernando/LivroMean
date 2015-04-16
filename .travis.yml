@@ -6,6 +6,7 @@ notifications:
 before_install:
 - npm install -g bower
 - npm install -g grunt-cli
+- npm install grunt
 - npm install -g karma-cli
 - npm install -g protractor
 - webdriver-manager update
