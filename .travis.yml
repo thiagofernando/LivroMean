@@ -6,6 +6,16 @@ notifications:
 before_install:
 - npm install -g bower
 - npm install grunt
+- npm install grunt
+- npm install grunt
+- npm install grunt
+- npm install grunt
+>> Local Npm module "grunt-contrib-clean" not found. Is it installed?
+>> Local Npm module "grunt-contrib-concat" not found. Is it installed?
+>> Local Npm module "grunt-contrib-uglify" not found. Is it installed?
+>> Local Npm module "grunt-contrib-cssmin" not found. Is it installed?
+>> Local Npm module "grunt-usemin" not found. Is it installed?
+>> Local Npm module "grunt-ng-annotate" not found. Is it installed?
 - npm install -g grunt-cli
 - npm install -g karma-cli
 - npm install -g protractor
