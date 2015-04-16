@@ -11,7 +11,7 @@ before_install:
 - webdriver-manager update
 - bower install
 before_script:
-- grunt
+- grunt build
 - cd dist
 - npm install karma-phantomjs-launcher --save-dev
 script:
