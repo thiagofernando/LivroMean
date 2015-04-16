@@ -8,8 +8,8 @@ before_install:
 - npm install -g grunt
 - npm install -g karma
 - npm install -g protractor
--webdriver-manager update
--bower install
+- webdriver-manager update
+- bower install
 before_script:
 - grunt
 - cd dist
