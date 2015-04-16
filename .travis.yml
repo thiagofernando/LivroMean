@@ -5,8 +5,8 @@ notifications:
 - thiagofernando@outlook.com
 before_install:
 - npm install -g bower
-- npm install grunt-cli
 - npm install grunt-contrib-clean
+- npm install grunt-contrib-copy
 - npm install grunt-contrib-concat
 - npm install grunt-contrib-uglify
 - npm install grunt-contrib-cssmin
