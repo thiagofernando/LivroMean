@@ -10,7 +10,7 @@ before_install:
 - npm install -g protractor
 -webdriver-manager update
 -bower install
-before_scripts:
+before_script:
 - grunt
 - cd dist
 - npm install karma-phantomjs-launcher --save-dev
