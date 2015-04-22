@@ -13,6 +13,7 @@ before_install:
 - npm install grunt-usemin
 - npm install grunt-ng-annotate
 - npm install -g grunt-cli
+- npm install -g karma-jasmine
 - npm install -g karma-cli
 - npm install -g protractor
 - webdriver-manager update
