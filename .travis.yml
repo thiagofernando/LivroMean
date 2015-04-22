@@ -12,10 +12,9 @@ before_install:
 - npm install grunt-contrib-cssmin
 - npm install grunt-usemin
 - npm install grunt-ng-annotate
-- npm install -g grunt-cli
-- npm install  karma 
-- npm install  karma-cli
-- npm install  karma-jasmine
+- npm install -g grunt-cli 
+- npm install -g karma-cli
+- npm install -g karma-jasmine
 - npm install -g protractor
 - webdriver-manager update
 - bower install
